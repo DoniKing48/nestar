@@ -24,16 +24,16 @@ export class Member {
 
   memberPassword?: string;
 
-  @Field(() => MemberType, { nullable: true })
+  @Field(() => String, { nullable: true })
   memberFullName?: string;
 
   @Field(() => String)
   memberImage?: string;
 
-  @Field(() => MemberType, { nullable: true })
+  @Field(() => String, { nullable: true })
   memberAddress?: string;
   
-  @Field(() => MemberType, { nullable: true })
+  @Field(() => String, { nullable: true })
   memberDesc?: string;
 
   @Field(() => Int)
