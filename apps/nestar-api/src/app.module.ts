@@ -9,6 +9,7 @@ import { ComponentsModule } from './components/components.module';
 import { DatabaseModule } from './database/database.module';
 import { error } from 'console';
 import { T } from './libs/types/common';
+import { ViewService } from './components/view/view.service';
 
 @Module({
   imports: [
