@@ -86,7 +86,8 @@ export class MemberResolver {
     const likeRefId = shapeIntoMongoObjectId(input);
     return await this.memberService.likeTargetMember(memberId, likeRefId);
   }  
-  // ADMIN
+
+  /* ADMIN */
 
   @Roles(MemberType.ADMIN)
   @UseGuards(RolesGuard)
