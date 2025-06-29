@@ -26,7 +26,7 @@ export const getSerialForImage = (filename: string) => {
 
 export const shapeIntoMongoObjectId = (target: any) => {
   return typeof target === 'string' ? new ObjectId(target) : target;
-}
+};
 
 export const lookupMember = {
 	$lookup: {
@@ -34,5 +34,23 @@ export const lookupMember = {
 		localField: 'memberId',
 		foreignField: '_id',
 		as: 'memberData',
+	},
+};
+
+export const lookupFollowingData = {
+	$lookup: {
+		from: 'members',
+		localField: 'followingId',
+		foreignField: '_id',
+		as: 'followingData',
+	},
+};
+
+export const lookupFollowerData = {
+	$lookup: {
+		from: 'members',
+		localField: 'followerId',
+		foreignField: '_id',
+		as: 'followerData',
 	},
 };
